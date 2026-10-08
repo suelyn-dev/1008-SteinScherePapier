@@ -94,9 +94,13 @@ function spielRunde(spielerZug) {
 
 
             if (spielerPunkte > vegetaPunkte) {
-                alert("Du hast gewonnen!!!")
+                setTimeout(() => {
+                    alert("Du hast gewonnen!!!")
+                }, 1000);
             } else {
-                alert("Vegeta hat gewonnen!")
+                setTimeout(() => {
+                    alert("Vegeta hat gewonnen!")
+                }, 1000);
             }
         }
     }

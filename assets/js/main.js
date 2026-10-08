@@ -65,7 +65,7 @@ function spielRunde(spielerZug) {
         ) {
             spielerPunkte++
             console.log("Spieler bekommt einen Punkt!");
-            pointsDisplay.textContent = `${spielerPunkte}:${sayaijinPunkte}`
+            pointsDisplay.textContent = `${spielerPunkte}:${vegetaPunkte}`
         } else if (
             (spielerZug == "schere" && pcZug == "stein") ||
             (spielerZug == "stein" && pcZug == "papier") ||
@@ -73,7 +73,7 @@ function spielRunde(spielerZug) {
         ) {
             vegetaPunkte++
             console.log("PC bekommt einen Punkt!");
-            pointsDisplay.textContent = `${spielerPunkte}:${sayaijinPunkte}`
+            pointsDisplay.textContent = `${spielerPunkte}:${vegetaPunkte}`
         } else {
             console.log("Unentschieden in dieser Runde!")
         }

@@ -3,6 +3,9 @@ const schere = document.querySelector("#schere")
 const stein = document.querySelector("#stein")
 const papier = document.querySelector("#papier")
 const pointsDisplay = document.querySelector(".points");
+//Animation-Bilder
+const gokuImg = document.querySelector("#goku");
+const vegetaImg = document.querySelector("#vegeta");
 
 alert("Presse Start um zu beginnen!")
 
@@ -66,6 +69,10 @@ function spielRunde(spielerZug) {
             spielerPunkte++
             console.log("Spieler bekommt einen Punkt!");
             pointsDisplay.textContent = `${spielerPunkte}:${vegetaPunkte}`
+
+            //Animation
+            gokuImg.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.25)' }, { transform: 'scale(1)' }], { duration: 200 });
+
         } else if (
             (spielerZug == "schere" && pcZug == "stein") ||
             (spielerZug == "stein" && pcZug == "papier") ||
@@ -74,6 +81,10 @@ function spielRunde(spielerZug) {
             vegetaPunkte++
             console.log("PC bekommt einen Punkt!");
             pointsDisplay.textContent = `${spielerPunkte}:${vegetaPunkte}`
+
+            //Animation
+            vegetaImg.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.25)' }, { transform: 'scale(1)' }], { duration: 200 });
+
         } else {
             console.log("Unentschieden in dieser Runde!")
         }
@@ -81,7 +92,7 @@ function spielRunde(spielerZug) {
             console.log("Das Spiel ist beendet!")
             spielGestartet = false;
 
-            
+
             if (spielerPunkte > vegetaPunkte) {
                 alert("Du hast gewonnen!!!")
             } else {

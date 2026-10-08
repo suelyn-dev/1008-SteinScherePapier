@@ -65,3 +65,14 @@
     height: auto;
     object-fit: contain;
 }
+
+/* Button färben */
+.btn button:active {
+    background-color: lightgreen; 
+    border-color: green;         
+    transform: scale(0.95);       /* Button einsinken lassen  */
+}
+
+.btn button:active img {
+    opacity: 0.6; 
+}
